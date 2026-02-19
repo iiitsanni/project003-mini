@@ -1,13 +1,27 @@
 import React from 'react';
 
 
-const AddGroceries = () => {
+const AddGroceries = ({handleChange, itemName}) => {
     const [count, setCount] = React.useState(1);
 
     const handleUpClick = () => {
+
+        if (count === 5) {
+            this.className += " disabled"
+
+        }else
         setCount(count + 1);
     }
     const handleDownClick = () => {
+
+        if(count < 1){
+            // setCount(0);
+            // this.className += "disabled"
+            handleChange(itemName);
+
+        }
+            //dont decrement
+            else
         setCount(count - 1);
     }
 

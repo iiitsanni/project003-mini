@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
-import AddGroceries from "./AddGroceries.jsx";
+import AddGroceries from "./components/AddGroceries.jsx";
 
 function App() {
     const sauce = [
@@ -23,6 +23,19 @@ function App() {
     const [selectedsauce, setSauce] = useState('')
     const [selectedmeat, setMeat] = useState('')
     const [selectedpasta, setPasta] = useState('')
+
+    const handleChange = (itemName) => {
+
+        if(itemName === "pasta"){
+            setPasta('')
+        }else if(itemName === "meat"){
+            setMeat('')
+        }else if(itemName === "sauce"){
+            setSauce('')
+        }
+    }
+
+
 
     return (
         <>
@@ -66,7 +79,7 @@ function App() {
                     {selectedsauce && (
                         <li className="grocery-row">
                             {selectedsauce}
-                            <AddGroceries/>
+                            <AddGroceries handleGroceries={handleChange} itemName={"sauce"}/>
                             <button onClick={() => setSauce('')}>Remove</button>
                         </li>
                     )}
@@ -75,7 +88,7 @@ function App() {
                     {selectedmeat && (
                         <li className="grocery-row">
                             {selectedmeat}
-                            <AddGroceries/>
+                            <AddGroceries handleGroceries={handleChange} itemName={"meat"}/>
                             <button onClick={() => setMeat('')}>Remove</button>
                         </li>
                     )}
@@ -84,7 +97,7 @@ function App() {
                     {selectedpasta && (
                         <li className="grocery-row">
                             {selectedpasta}
-                            <AddGroceries />
+                            <AddGroceries handleGroceries={handleChange} itemName={"pasta"}/>
                             <button onClick={() => setPasta('')}>Remove</button>
                         </li>
                     )}
