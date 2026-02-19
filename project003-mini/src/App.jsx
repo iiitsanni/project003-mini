@@ -1,24 +1,22 @@
 import React, { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-// import AddGroceries from "AddGroceries.jsx";
+import AddGroceries from "./AddGroceries.jsx";
 
 function App() {
     const sauce = [
-        {label: "Tomato Sauce", value: "tomatoSauce"},
-        {label: "Alfredo Sauce", value: "alfredo"},
-        {label: "Marinara", value: "marinara"}
+        {label: "Tomato Sauce"},
+        {label: "Alfredo Sauce"},
+        {label: "Marinara"}
     ];
     const meat = [
-        {label: "Ground Beef", value: "beef"},
-        {label: "Chicken", value: "chicken"},
-        {label: "Pork", value: "pork"}
+        {label: "Ground Beef"},
+        {label: "Chicken"},
+        {label: "Pork"}
     ];
     const pasta = [
-        {label: "Spaghetti", value: "spaghetti"},
-        {label: "Penne", value: "penne"},
-        {label: "Macaroni", value: "macaroni"}
+        {label: "Spaghetti"},
+        {label: "Penne"},
+        {label: "Macaroni"}
     ];
 
     //const SauceItems = sauce.map(sauce => <li>{sauce}</li>);
@@ -48,7 +46,7 @@ function App() {
                 <select value={selectedsauce} onChange={(e) => setSauce(e.target.value)}>
                     <option value="">-- Select a Sauce --</option>
                     {sauce.map((s, i) => (
-                        <option key={i} value={s.value}>
+                        <option >
                             {s.label}
                         </option>
                     ))}
@@ -57,7 +55,7 @@ function App() {
                 <select value={selectedmeat} onChange={(e) => setMeat(e.target.value)}>
                     <option value="">-- Select Meat --</option>
                     {meat.map((m, i) => (
-                        <option key={i} value={m.value}>
+                        <option>
                             {m.label}
                         </option>
                     ))}
@@ -66,7 +64,7 @@ function App() {
                 <select value={selectedpasta} onChange={(e) => setPasta(e.target.value)}>
                     <option value="">-- Select a Pasta --</option>
                     {pasta.map((p, i) => (
-                        <option key={i} value={p.value}>
+                        <option>
                             {p.label}
                         </option>
                     ))}
