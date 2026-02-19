@@ -19,27 +19,11 @@ function App() {
         {label: "Macaroni"}
     ];
 
-    //const SauceItems = sauce.map(sauce => <li>{sauce}</li>);
 
     const [selectedsauce, setSauce] = useState('')
     const [selectedmeat, setMeat] = useState('')
     const [selectedpasta, setPasta] = useState('')
 
-    // modify button states, make selection static except when button modify is clicked
-    const [editPasta, setEditPasta] = useState(false)
-    const [editMeat, setEditMeat] = useState(false)
-    const [editSauce, setEditSauce] = useState(false)
-
-    /*const handleSauceChange = (bolo) => {
-        setSauce(bolo.target.value)
-    };
-    const handleMeatChange = (bolo) => {
-        setMeat(bolo.target.value);
-    };
-    const handlePastaChange = (bolo) => {
-        setPasta(bolo.target.value);
-    };
-    */
     return (
         <>
             <div className='dropdown'>
