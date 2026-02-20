@@ -14,13 +14,12 @@ const AddGroceries = ({handleChange, itemName}) => {
     }
     const handleDownClick = () => {
 
-        if(count < 1){
+        if(count === 1){
             // setCount(0);
             // this.className += "disabled"
             handleChange(itemName);
 
         }
-            //dont decrement
             else
         setCount(count - 1);
     }

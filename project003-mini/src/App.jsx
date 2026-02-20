@@ -3,6 +3,7 @@ import './App.css'
 import AddGroceries from "./components/AddGroceries.jsx";
 
 function App() {
+    const itemTypes=['sauce','meat','pasta'];
     const sauce = [
         {label: "Tomato Sauce"},
         {label: "Alfredo Sauce"},
@@ -79,7 +80,7 @@ function App() {
                     {selectedsauce && (
                         <li className="grocery-row">
                             {selectedsauce}
-                            <AddGroceries handleGroceries={handleChange} itemName={"sauce"}/>
+                            <AddGroceries handleChange={handleChange} itemName={"sauce"}/>
                             <button onClick={() => setSauce('')}>Remove</button>
                         </li>
                     )}
@@ -88,7 +89,7 @@ function App() {
                     {selectedmeat && (
                         <li className="grocery-row">
                             {selectedmeat}
-                            <AddGroceries handleGroceries={handleChange} itemName={"meat"}/>
+                            <AddGroceries handleChange={handleChange} itemName={"meat"}/>
                             <button onClick={() => setMeat('')}>Remove</button>
                         </li>
                     )}
@@ -97,7 +98,7 @@ function App() {
                     {selectedpasta && (
                         <li className="grocery-row">
                             {selectedpasta}
-                            <AddGroceries handleGroceries={handleChange} itemName={"pasta"}/>
+                            <AddGroceries handleChange={handleChange} itemName={"pasta"}/>
                             <button onClick={() => setPasta('')}>Remove</button>
                         </li>
                     )}
