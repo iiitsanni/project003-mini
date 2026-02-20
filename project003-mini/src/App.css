@@ -174,20 +174,47 @@ ul{
 }
 .
 
-@keyframes logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 @media (prefers-reduced-motion: no-preference) {
     a:nth-of-type(2) .logo {
         animation: logo-spin infinite 20s linear;
     }
+
 }
+@media (max-width: 640px) {
+    #root {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .grocery-row {
+        flex-direction: column;
+        width: 100%; gap: 10px;
+    }
+    .grocery-row button {
+        margin-left: 0;
+    }
+    select {
+        width: 150px;
+        height: 35px;
+    }
+    ul {
+        flex-direction: column;
+        column-count: 1;
+        align-items: center;
+    }
+    .negative,
+    .plus,
+    .remove {
+        width: 80px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    .options {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 
 .card {
     padding: 2em;
