@@ -6,6 +6,8 @@ An app that creates a Grocery list for the User through a dropdown menu.
 Annika Maringer
 
 ## Website link
+https://project003-mini-annikama.vercel.app/
+(netlify gave me problems so i needed to use something else)
 
 # Description
 This is a Grocery List React application that allows the User to create a grocery list from a dropdown menu. There are three lists that contain the different types of Pasta, Sauce and Meat. As soon as the selection is made the Items are displayed with a add or decrease button to choose the quantity and a remove button to fully remove the Item.
