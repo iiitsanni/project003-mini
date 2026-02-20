@@ -23,6 +23,9 @@ select{
     align-items: center;
     margin: 1rem;
     border-radius: 15px;
+    background-color: #242424;
+    color: white;
+    box-shadow: #1a1a1a 1px 1px 1px ;
 }
 .dropdown{
     display: flex;
@@ -47,73 +50,129 @@ ul{
 .negative{
     width: 50px;
     height: 50px;
+    color: #3c006b;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    background: #30cfd0;
+    border-radius: 0;
+}
+.negative:hover{
+    background: #3c006b;
+    color: #30cfd0;
+
+}
+.negative:active{
+    transform: translate(5px,5px);
+    transition-duration: .3s;
 }
 .plus{
     width: 50px;
     height: 50px;
+    color: #3c006b;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    background: #30cfd0;
+    border-radius: 0;
+}
+.plus:hover{
+    background: #3c006b;
+    color: #30cfd0;
+}
+.plus:active{
+    transform: translate(5px,5px);
+    transition-duration: .3s;
 }
 .grocery-row {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 500px;
     margin-bottom: 8px;
 }
 
 .grocery-row button {
     margin-left: 20px;
 }
-
-.remove {
+.remove{
     width: 100px;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(15, 15, 15);
+    background: #30cfd0;
     border: none;
-    color: white;
+    border-radius: 0;
+    color: #3c006b;
     font-weight: 600;
     gap: 8px;
     cursor: pointer;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
     overflow: hidden;
     transition-duration: .3s;
 }
-.remove:before {
+.remove::before {
     width: 130px;
     height: 130px;
     position: absolute;
     content: "";
-    background-color: white;
-    left: -130%;
+    border-radius: 50%;
+    left: -160%;
     top: 0;
     transition-duration: .3s;
-    mix-blend-mode: difference;
+
+}
+.remove:hover{
+    background-color: #3c006b;
+    color: #30cfd0;
 }
 .remove:hover::before {
     transition-duration: .3s;
     transform: translate(100%,-50%);
+    color: #30cfd0;
+    border-radius: 0;
 }
-.remove:active {
+.remove:active{
     transform: translate(5px,5px);
     transition-duration: .3s;
 }
-.remove:hover {
-    scale: 1;
+
+
+.checkbox{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #30cfd0;
+    border-radius: 5px;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
 }
-.logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+.checkbox:before {
+    content: "";
+    background-color: #30cfd0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
 }
-.logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+.checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
 }
-.logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.
 
 @keyframes logo-spin {
     from {

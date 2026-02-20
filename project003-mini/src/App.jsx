@@ -79,27 +79,31 @@ function App() {
 
                     {selectedsauce && (
                         <li className="grocery-row">
+                            <input type="checkbox" className="checkbox"/>
+
                             {selectedsauce}
                             <AddGroceries handleChange={handleChange} itemName={"sauce"}/>
-                            <button onClick={() => setSauce('')}>Remove</button>
+                            <button className='remove' onClick={() => setSauce('')}><span className="remove-label">Remove</span></button>
                         </li>
                     )}
 
 
                     {selectedmeat && (
                         <li className="grocery-row">
+                            <input type="checkbox" className="checkbox"/>
                             {selectedmeat}
                             <AddGroceries handleChange={handleChange} itemName={"meat"}/>
-                            <button onClick={() => setMeat('')}>Remove</button>
+                            <button className='remove' onClick={() => setMeat('')}><span className="remove-label">Remove</span></button>
                         </li>
                     )}
 
 
                     {selectedpasta && (
                         <li className="grocery-row">
+                            <input type="checkbox" className="checkbox"/>
                             {selectedpasta}
                             <AddGroceries handleChange={handleChange} itemName={"pasta"}/>
-                            <button onClick={() => setPasta('')}>Remove</button>
+                            <button className='remove' onClick={() => setPasta('')}><span className="remove-label">Remove</span></button>
                         </li>
                     )}
 
