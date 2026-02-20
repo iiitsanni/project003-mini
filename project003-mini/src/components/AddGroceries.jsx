@@ -5,13 +5,9 @@ const AddGroceries = ({handleChange, itemName}) => {
     const [count, setCount] = React.useState(1);
 
     const handleUpClick = () => {
-
-        if (count === 5) {
-            this.className += " disabled"
-
-        }else
         setCount(count + 1);
     }
+
     const handleDownClick = () => {
 
         if(count === 1){
